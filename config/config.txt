@@ -1,0 +1,5 @@
+EMAIL=cristinalupescu04@gmail.com
+SUBJECT=Raport de Securitate Linux
+LOG_FILE=log.txt
+REPORT_FILE=report.txt
+DIRECTORIES= /home/cris/Desktop/test/config/dir1 /home/cris/Desktop/test/config/dir1 
