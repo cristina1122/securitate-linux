@@ -13,3 +13,8 @@ Verificare în directorul: /home/cris/Desktop/test/config/dir1
 /home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
 Verificare în directorul: /home/cris/Desktop/test/config/dir1
 /home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+Verific permisiunile executabilelor...
+Verificare în directorul: /home/cris/Desktop/test/config/dir1
+/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+Verificare în directorul: /home/cris/Desktop/test/config/dir1
+/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
