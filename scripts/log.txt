@@ -1,20 +1,12 @@
+*********************************************************************
+2024-06-19 12:47:02 - Începerea verificării proceselor.
+*********************************************************************
+2024-06-19 12:47:04 - Verificare procese completată. Raport salvat în processes_report.txt.
 Verific permisiunile executabilelor...
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verific permisiunile executabilelor...
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verific permisiunile executabilelor...
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verific permisiunile executabilelor...
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
-Verificare în directorul: /home/cris/Desktop/test/config/dir1
-/home/cris/Desktop/test/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir1
+/home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+/home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh: Permisiuni 777, Proprietar cris, Grup cris
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
+/home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh: Permisiuni 777, Proprietar cris, Grup cris

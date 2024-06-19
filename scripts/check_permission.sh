@@ -19,6 +19,7 @@ IFS=' ' read -r -a directories_array <<< "$DIRECTORIES"
 
 # Parcurgem fiecare director în lista DIRECTORIES
 for dir in "${directories_array[@]}"; do
+    echo "*************************************************************" | tee -a "$LOG_FILE"
     echo "Verificare în directorul: $dir" | tee -a "$LOG_FILE"
     # Verificăm recursiv fișierele executabile în directorul curent
     while IFS= read -r -d '' file; do

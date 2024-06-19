@@ -1,5 +1,6 @@
 EMAIL=cristinalupescu04@gmail.com
 SUBJECT=Raport de Securitate Linux
 LOG_FILE=log.txt
-REPORT_FILE=report.txt
-DIRECTORIES= /home/cris/Desktop/test/config/dir1 /home/cris/Desktop/test/config/dir1 
+PROCESS_REPORT_FILE=processes_report.txt
+DIRECTORIES=/home/cris/Desktop/git/securitate-linux/config/dir1 /home/cris/Desktop/git/securitate-linux/config/dir2
+KNOWN_PROCESS_NAMES="sleep"
