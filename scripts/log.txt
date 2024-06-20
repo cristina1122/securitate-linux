@@ -10,3 +10,33 @@ Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir1
 *************************************************************
 Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
 /home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh: Permisiuni 777, Proprietar cris, Grup cris
+2024-06-20 10:53:39 - Începerea verificării sumelor de control.
+2024-06-20 10:53:39 - Verificare sume de control completată. Raport salvat în ../reports/checksum_report.txt.
+2024-06-20 10:55:14 - Începerea verificării sumelor de control.
+2024-06-20 10:55:15 - Verificare sume de control completată. Raport salvat în checksum_report.txt.
+2024-06-20 11:23:54 - Începerea verificării sumelor de control.
+2024-06-20 11:23:54 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 11:23:54.
+2024-06-20 11:26:23 - Începerea verificării sumelor de control.
+2024-06-20 11:26:23 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 11:26:23.
+2024-06-20 12:14:39 - Începerea verificării sumelor de control.
+2024-06-20 12:14:52 - Începerea verificării sumelor de control.
+2024-06-20 12:14:52 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:14:52.
+2024-06-20 12:15:15 - Începerea verificării sumelor de control.
+2024-06-20 12:15:15 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:15:15.
+2024-06-20 12:15:37 - Începerea verificării sumelor de control.
+2024-06-20 12:15:37 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:15:37.
+2024-06-20 12:17:02 - Începerea verificării sumelor de control.
+2024-06-20 12:17:02 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:17:02.
+2024-06-20 12:17:16 - Începerea verificării sumelor de control.
+2024-06-20 12:17:16 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:17:16.
+2024-06-20 12:17:39 - Începerea verificării sumelor de control.
+2024-06-20 12:17:39 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:17:39.
+2024-06-20 12:18:24 - Începerea verificării sumelor de control.
+2024-06-20 12:18:24 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:18:24.
+2024-06-20 12:18:41 - Începerea verificării sumelor de control.
+2024-06-20 12:18:41 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:18:41.
+2024-06-20 12:19:06 - Începerea verificării sumelor de control.
+2024-06-20 12:19:18 - Începerea verificării sumelor de control.
+2024-06-20 12:19:18 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:19:18.
+2024-06-20 12:23:51 - Începerea verificării sumelor de control.
+2024-06-20 12:23:51 - Verificare sume de control completată. Raport salvat în checksum_report.txt la data: 2024-06-20 12:23:51.
