@@ -1,0 +1,64 @@
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 09:44:44
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 09:44:44
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 10:12:21
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 10:12:21
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 10:15:12
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 10:15:12
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 11:47:44
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 11:47:44
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 12:19:24
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 12:19:24
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 12:38:56
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 12:38:56
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 13:00:52
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 13:00:52
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 13:01:17
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-25 13:01:17
+-----------------------------------------

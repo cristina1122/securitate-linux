@@ -1,9 +1,11 @@
 EMAIL=cristinalupescu04@gmail.com
 SUBJECT=Raport de Securitate Linux
 LOG_FILE=log.txt
-PROCESS_REPORT_FILE=processes_report.txt
-VERSION_REPORT_FILE=version_report.txt
-CHECKSUM_REPORT_FILE=checksum_report.txt
+PROCESS_REPORT_FILE=reports/processes_report.txt
+VERSION_REPORT_FILE=reports/version_report.txt
+CHECKSUM_REPORT_FILE=reports/checksum_report.txt
+SENSITIVE_FILE_REPORT=reports/sensitive_file_report.txt
 CHECKSUMS_FILE=../config/checksums_list.txt
 DIRECTORIES=/home/cris/Desktop/git/securitate-linux/config/dir1 /home/cris/Desktop/git/securitate-linux/config/dir2
+SENSITIVE_FILES= /etc/passwd /etc/group
 KNOWN_PROCESS_NAMES="sleep"
