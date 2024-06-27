@@ -38,7 +38,7 @@ do
         if [ "$actual_checksum" == "$expected_checksum" ]; then
             echo "Fișierul $package_file are suma de control corectă." >> $CHECKSUM_REPORT_FILE
         else
-            echo "Fișierul $package_file are suma de control incorectă!" >> $CHECKSUM_REPORT_FILE
+            echo "Fișierul $package_file are suma de control INCORECTA!" >> $CHECKSUM_REPORT_FILE
         fi
     else
         echo "Fișierul $package_file nu există." >> $CHECKSUM_REPORT_FILE

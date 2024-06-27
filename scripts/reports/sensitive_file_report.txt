@@ -6,3 +6,11 @@ Fișier: /etc/group
 Permisiuni: -rw-r--r--
 Verificare efectuată la: 2024-06-26 18:55:25
 -----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-27 09:28:45
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-27 09:28:45
+-----------------------------------------

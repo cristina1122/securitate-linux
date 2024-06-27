@@ -1,4 +1,4 @@
-Generare sume de control pentru fișierele din directoarele specificate la data: 2024-06-26 18:58:20
+Generare sume de control pentru fișierele din directoarele specificate la data: 2024-06-27 09:29:14
 6ce3a6e258fc2d9edd8a8adc7cb4721676e74394285b134f67102e24b10615db  /home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh
 8223def7b2e983e521b71865265e8d44f934398c76344cd1524fdcdfb0a63287  /home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh

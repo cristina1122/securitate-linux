@@ -8,7 +8,8 @@ display_menu() {
     echo "3. Verificare permisiuni"
     echo "4. Verificare procese"
     echo "5. Generare sume de control"
-    echo "6. Ieșire"
+    echo "6. Verificarea logurilor"
+    echo "7. Ieșire"
     echo ""
     echo -n "Selectați o opțiune: "
 }
@@ -74,7 +75,11 @@ while true; do
             echo "Parolă corectă. Începe generarea sumelor de control..."
             ./generate_checksum.sh
             ;;
-        6)
+        6)	send_notification "verificare logurilor"
+        	echo "Verificarea logurilor"
+        	./check_system_logs.sh
+        	;;
+        7)
             echo "Ieșire din meniu. La revedere!"
             exit 0
             ;;

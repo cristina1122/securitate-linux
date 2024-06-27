@@ -23,9 +23,11 @@ Verificare fisiere sensibile(ex:/etc/passwd )
           -Procese cu conexiuni de retea deschise 
           -Procese cu permisiuni setuid/setgid
         Aceste informatii sunt salvate in process_report.txt si crearea lor e notificata in log.txt
-  check_package_versions.sh
   check_file_checksums.sh
-  generate_report.sh
+  check_process.sh
+  check_sensitive_files.sh
+  check_system_logs.sh
+  generate_checksum.sh                                                               
 ## 2 config/
         -config.txt
 ## 3 main.sh
