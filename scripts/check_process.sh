@@ -31,7 +31,7 @@ echo "Procese rulate de utilizatorul root:" >> $PROCESS_REPORT_FILE
 ps aux | awk '$1 == "root"' | head -n 20 >> $PROCESS_REPORT_FILE
 echo "" >> $PROCESS_REPORT_FILE
 
-# Verifică procesele necunoscute sau suspicioase
+# Verifică procesele cunoscute sau suspicioase
 echo "*****************************************************************************" >> $PROCESS_REPORT_FILE
 echo "Procese suspicioase (filtrare după nume necunoscute):" >> $PROCESS_REPORT_FILE
 ps aux | grep -v -E "root|USER|$KNOWN_PROCESS_NAMES" | head -n 20 >> $PROCESS_REPORT_FILE
@@ -62,5 +62,5 @@ echo "" >> $PROCESS_REPORT_FILE
 
 log_message "Verificare procese completată. Raport salvat în $PROCESS_REPORT_FILE."
 
-#echo "Verificare procese completată. Raport salvat în $PROCESS_REPORT_FILE."
+echo "Verificare procese completată. Raport salvat în $PROCESS_REPORT_FILE."
 

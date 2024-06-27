@@ -1,5 +1,3 @@
-EMAIL=cristinalupescu04@gmail.com
-SUBJECT=Raport de Securitate Linux
 LOG_FILE=log.txt
 PROCESS_REPORT_FILE=reports/processes_report.txt
 VERSION_REPORT_FILE=reports/version_report.txt
