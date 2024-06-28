@@ -14,3 +14,27 @@ Fișier: /etc/group
 Permisiuni: -rw-r--r--
 Verificare efectuată la: 2024-06-27 09:28:45
 -----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 08:25:01
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 08:25:01
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 08:41:45
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 08:41:45
+-----------------------------------------
+Fișier: /etc/passwd
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 10:14:30
+-----------------------------------------
+Fișier: /etc/group
+Permisiuni: -rw-r--r--
+Verificare efectuată la: 2024-06-28 10:14:30
+-----------------------------------------

@@ -22,7 +22,7 @@ log_message() {
 # Data curentă
 CURRENT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
 
-# Începe logarea și verificările
+
 log_message "Începerea verificării sumelor de control."
 
 # Verifică sumele de control, vreau sa se suprascrie la fiecare rulare

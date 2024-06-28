@@ -38,3 +38,69 @@ Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
 2024-06-27 09:28:55 - Începerea verificării proceselor.
 *********************************************************************
 2024-06-27 09:28:59 - Verificare procese completată. Raport salvat în reports/processes_report.txt.
+2024-06-28 08:24:52 - Începerea verificării sumelor de control.
+2024-06-28 08:24:52 - Verificare sume de control completată. Raport salvat în reports/checksum_report.txt la data: 2024-06-28 08:24:52.
+Verificare permisiuni pentru /etc/passwd la data 2024-06-28 08:25:01
+Permisiuni: -rw-r--r--
+
+Verificare permisiuni pentru /etc/group la data 2024-06-28 08:25:01
+Permisiuni: -rw-r--r--
+
+Verific permisiunile executabilelor...
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir1
+/home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+/home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh: Permisiuni 777, Proprietar cris, Grup cris
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
+/home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh: Permisiuni 777, Proprietar cris, Grup cris
+*********************************************************************
+2024-06-28 08:25:16 - Începerea verificării proceselor.
+*********************************************************************
+2024-06-28 08:25:19 - Verificare procese completată. Raport salvat în reports/processes_report.txt.
+*********************************************************************
+2024-06-28 08:30:11 - Începerea verificării proceselor.
+*********************************************************************
+2024-06-28 08:30:12 - Verificare procese completată. Raport salvat în reports/processes_report.txt.
+2024-06-28 08:32:11 - Începerea verificării sumelor de control.
+2024-06-28 08:32:11 - Verificare sume de control completată. Raport salvat în reports/checksum_report.txt la data: 2024-06-28 08:32:11.
+Verific permisiunile executabilelor...
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir1
+/home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+/home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh: Permisiuni 777, Proprietar cris, Grup cris
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
+/home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh: Permisiuni 777, Proprietar cris, Grup cris
+Verificare permisiuni pentru /etc/passwd la data 2024-06-28 08:41:45
+Permisiuni: -rw-r--r--
+
+Verificare permisiuni pentru /etc/group la data 2024-06-28 08:41:45
+Permisiuni: -rw-r--r--
+
+*********************************************************************
+2024-06-28 08:41:58 - Începerea verificării proceselor.
+*********************************************************************
+2024-06-28 08:41:59 - Verificare procese completată. Raport salvat în reports/processes_report.txt.
+2024-06-28 10:14:00 - Începerea verificării sumelor de control.
+2024-06-28 10:14:00 - Verificare sume de control completată. Raport salvat în reports/checksum_report.txt la data: 2024-06-28 10:14:00.
+2024-06-28 10:14:27 - Începerea verificării sumelor de control.
+2024-06-28 10:14:27 - Verificare sume de control completată. Raport salvat în reports/checksum_report.txt la data: 2024-06-28 10:14:27.
+Verificare permisiuni pentru /etc/passwd la data 2024-06-28 10:14:30
+Permisiuni: -rw-r--r--
+
+Verificare permisiuni pentru /etc/group la data 2024-06-28 10:14:30
+Permisiuni: -rw-r--r--
+
+Verific permisiunile executabilelor...
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir1
+/home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh: Permisiuni 775, Proprietar cris, Grup cris
+/home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh: Permisiuni 777, Proprietar cris, Grup cris
+*************************************************************
+Verificare în directorul: /home/cris/Desktop/git/securitate-linux/config/dir2
+/home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh: Permisiuni 777, Proprietar cris, Grup cris
+*********************************************************************
+2024-06-28 10:14:36 - Începerea verificării proceselor.
+*********************************************************************
+2024-06-28 10:14:38 - Verificare procese completată. Raport salvat în reports/processes_report.txt.

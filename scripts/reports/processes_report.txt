@@ -246,3 +246,495 @@ Procese cu permisiuni setuid/setgid:
 /snap/core20/2318/usr/bin/ssh-agent
 /snap/core20/2318/usr/bin/su
 
+*****************************************************************************
+Verificare procese curente din punct de vedere al securității: 2024-06-28 08:25:16
+*****************************************************************************
+Procese rulate de utilizatorul root:
+root           1  0.5  0.2 166836 11768 ?        Ss   08:11   0:04 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    08:11   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:11   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:11   0:00 [netns]
+root           9  0.0  0.0      0     0 ?        I    08:11   0:00 [kworker/0:1-mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I<   08:11   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    08:11   0:00 [ksoftirqd/0]
+root          16  0.1  0.0      0     0 ?        I    08:11   0:01 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    08:11   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/1]
+root          22  0.1  0.0      0     0 ?        S    08:11   0:01 [migration/1]
+root          23  0.3  0.0      0     0 ?        S    08:11   0:03 [ksoftirqd/1]
+
+*****************************************************************************
+Procese suspicioase (filtrare după nume necunoscute):
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:11   0:02 /lib/systemd/systemd-oomd
+systemd+     375  0.0  0.3  25672 13792 ?        Ss   08:11   0:00 /lib/systemd/systemd-resolved
+systemd+     379  0.0  0.1  89388  7424 ?        Ssl  08:11   0:00 /lib/systemd/systemd-timesyncd
+avahi        613  0.0  0.1   7632  4224 ?        Ss   08:11   0:00 avahi-daemon: running [cris-VirtualBox.local]
+message+     617  0.2  0.1  11096  6784 ?        Ss   08:11   0:02 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       646  0.0  0.1 222404  6016 ?        Ssl  08:11   0:00 /usr/sbin/rsyslogd -n -iNONE
+kernoops     863  0.0  0.0  13092  2456 ?        Ss   08:11   0:00 /usr/sbin/kerneloops --test
+kernoops     884  0.0  0.0  13092  2464 ?        Ss   08:11   0:00 /usr/sbin/kerneloops
+rtkit        933  0.0  0.0 154004  3200 ?        SNsl 08:11   0:00 /usr/libexec/rtkit-daemon
+colord      1323  0.0  0.3 248252 13552 ?        Ssl  08:12   0:00 /usr/libexec/colord
+cris        1410  0.1  0.2  18068 10924 ?        Ss   08:14   0:01 /lib/systemd/systemd --user
+cris        1411  0.0  0.1 104712  6016 ?        S    08:14   0:00 (sd-pam)
+cris        1417  0.0  0.1  42448  6912 ?        S<sl 08:14   0:00 /usr/bin/pipewire
+cris        1418  0.0  0.1  26336  6912 ?        Ssl  08:14   0:00 /usr/bin/pipewire-media-session
+cris        1419  0.1  0.6 1425400 27012 ?       S<sl 08:14   0:01 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cris        1438  0.2  0.2  13484  9472 ?        Ss   08:14   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+cris        1440  0.0  0.1 243776  7836 ?        Sl   08:14   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+cris        1446  0.0  0.2 243620  8704 ?        Ssl  08:14   0:00 /usr/libexec/gvfsd
+cris        1447  0.0  0.1 539908  7936 ?        Ssl  08:14   0:00 /usr/libexec/xdg-document-portal
+cris        1453  0.0  0.1 239024  6656 ?        Ssl  08:14   0:00 /usr/libexec/xdg-permission-store
+
+*****************************************************************************
+Procese care folosesc resurse excesive (CPU):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589 10.1 13.4 4707384 537876 ?      Ssl  08:14   1:05 /usr/bin/gnome-shell
+cris        2799  7.6  5.3 1188313684 215676 ?   Sl   08:15   0:45 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+root        1174  1.8  1.0 375696 43812 ?        Ssl  08:12   0:14 /usr/libexec/packagekitd
+cris        2693  1.8  3.9 1186265212 157796 ?   SLsl 08:15   0:10 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        2818  1.8  2.5 33907472 100348 ?     Sl   08:15   0:11 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2835  1.5  2.4 1186095776 98300 ?    Sl   08:15   0:08 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        3778  1.4  1.6 2868388 65644 ?       Sl   08:24   0:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+cris        1935  0.9  3.1 978976 127852 ?       Sl   08:14   0:05 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+root         653  0.7  0.8 1320028 32656 ?       Ssl  08:11   0:05 /usr/lib/snapd/snapd
+cris        2834  0.7  3.0 1186097648 123784 ?   Sl   08:15   0:04 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2712  0.6  2.3 239964 93664 ?        S    08:15   0:03 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+root           1  0.5  0.2 166836 11768 ?        Ss   08:11   0:04 /sbin/init splash
+root        2166  0.5  2.3 464356 93700 ?        Ssl  08:14   0:03 /usr/libexec/fwupd/fwupd
+root         335  0.4  0.0      0     0 ?        I    08:11   0:03 [kworker/u4:8-events_unbound]
+root          23  0.3  0.0      0     0 ?        S    08:11   0:03 [ksoftirqd/1]
+root          28  0.3  0.0      0     0 ?        I    08:11   0:03 [kworker/u4:1-events_power_efficient]
+root          97  0.3  0.0      0     0 ?        I<   08:11   0:02 [kworker/1:1H-kblockd]
+root         121  0.3  0.0      0     0 ?        I    08:11   0:02 [kworker/1:3-events]
+root         640  0.3  0.2 245944 11864 ?        Ssl  08:11   0:03 /usr/libexec/polkitd --no-debug
+
+*****************************************************************************
+Procese care folosesc resurse excesive (Memorie):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589 10.1 13.4 4707384 537876 ?      Ssl  08:14   1:05 /usr/bin/gnome-shell
+cris        2799  7.6  5.3 1188313684 215676 ?   Sl   08:15   0:45 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        2693  1.8  3.9 1186265212 157796 ?   SLsl 08:15   0:10 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        1935  0.9  3.1 978976 127852 ?       Sl   08:14   0:05 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+cris        2834  0.7  3.0 1186097648 123784 ?   Sl   08:15   0:04 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2818  1.8  2.5 33907472 100348 ?     Sl   08:15   0:11 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2835  1.5  2.4 1186095776 98300 ?    Sl   08:15   0:08 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root        2166  0.5  2.3 464356 93700 ?        Ssl  08:14   0:03 /usr/libexec/fwupd/fwupd
+cris        2712  0.6  2.3 239964 93664 ?        S    08:15   0:03 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+cris        2836  0.2  2.2 1186112740 89640 ?    Sl   08:15   0:01 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2715  0.0  2.0 531768 81568 ?        Ssl  08:15   0:00 /usr/libexec/gsd-xsettings
+cris        2774  0.1  1.6 33833308 67256 ?      Sl   08:15   0:00 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        1820  0.0  1.6 825596 67200 ?        Sl   08:14   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+cris        3778  1.4  1.6 2868388 65644 ?       Sl   08:24   0:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+cris        2284  0.3  1.3 564828 52592 ?        Ssl  08:14   0:02 /usr/libexec/gnome-terminal-server
+cris        2696  0.0  1.1 33783124 47488 ?      S    08:15   0:00 /snap/code/162/usr/share/code/code --type=zygote --no-sandbox
+cris        2695  0.0  1.1 33783116 46976 ?      S    08:15   0:00 /snap/code/162/usr/share/code/code --type=zygote --no-zygote-sandbox --no-sandbox
+root        1174  1.8  1.0 375696 43812 ?        Ssl  08:12   0:14 /usr/libexec/packagekitd
+cris        1580  0.0  1.0 658488 40960 ?        Sl   08:14   0:00 /usr/libexec/goa-daemon
+
+*****************************************************************************
+Procese cu conexiuni de rețea deschise:
+
+*****************************************************************************
+Procese cu permisiuni setuid/setgid:
+/var/spool/postfix/public
+/var/mail
+/var/log/journal
+/var/log/journal/d2bf2c32cac84294853b1b5abe4249a9
+/var/metrics
+/var/crash
+/var/local
+/run/log/journal
+/snap/snapd/21465/usr/lib/snapd/snap-confine
+/snap/snapd/21759/usr/lib/snapd/snap-confine
+/snap/core20/2318/usr/bin/chage
+/snap/core20/2318/usr/bin/chfn
+/snap/core20/2318/usr/bin/chsh
+/snap/core20/2318/usr/bin/expiry
+/snap/core20/2318/usr/bin/gpasswd
+/snap/core20/2318/usr/bin/mount
+/snap/core20/2318/usr/bin/newgrp
+/snap/core20/2318/usr/bin/passwd
+/snap/core20/2318/usr/bin/ssh-agent
+/snap/core20/2318/usr/bin/su
+
+*****************************************************************************
+Verificare procese curente din punct de vedere al securității: 2024-06-28 08:30:11
+*****************************************************************************
+Procese rulate de utilizatorul root:
+root           1  0.4  0.2 166836 11768 ?        Ss   08:11   0:04 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    08:11   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:11   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:11   0:00 [netns]
+root           9  0.0  0.0      0     0 ?        I    08:11   0:00 [kworker/0:1-events]
+root          11  0.0  0.0      0     0 ?        I<   08:11   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    08:11   0:00 [ksoftirqd/0]
+root          16  0.1  0.0      0     0 ?        I    08:11   0:01 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    08:11   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/1]
+root          22  0.0  0.0      0     0 ?        S    08:11   0:01 [migration/1]
+root          23  0.3  0.0      0     0 ?        S    08:11   0:03 [ksoftirqd/1]
+
+*****************************************************************************
+Procese suspicioase (filtrare după nume necunoscute):
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:11   0:03 /lib/systemd/systemd-oomd
+systemd+     375  0.0  0.3  25672 13792 ?        Ss   08:11   0:00 /lib/systemd/systemd-resolved
+systemd+     379  0.0  0.1  89388  7424 ?        Ssl  08:11   0:00 /lib/systemd/systemd-timesyncd
+avahi        613  0.0  0.1   7632  4224 ?        Ss   08:11   0:00 avahi-daemon: running [cris-VirtualBox.local]
+message+     617  0.2  0.1  11096  6784 ?        Ss   08:11   0:02 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       646  0.0  0.1 222404  6016 ?        Ssl  08:11   0:00 /usr/sbin/rsyslogd -n -iNONE
+kernoops     863  0.0  0.0  13092  2456 ?        Ss   08:11   0:00 /usr/sbin/kerneloops --test
+kernoops     884  0.0  0.0  13092  2464 ?        Ss   08:11   0:00 /usr/sbin/kerneloops
+rtkit        933  0.0  0.0 154004  3200 ?        SNsl 08:11   0:00 /usr/libexec/rtkit-daemon
+colord      1323  0.0  0.3 248252 13552 ?        Ssl  08:12   0:00 /usr/libexec/colord
+cris        1410  0.1  0.2  18068 10924 ?        Ss   08:14   0:01 /lib/systemd/systemd --user
+cris        1411  0.0  0.1 104712  6016 ?        S    08:14   0:00 (sd-pam)
+cris        1417  0.0  0.1  42448  6912 ?        S<sl 08:14   0:00 /usr/bin/pipewire
+cris        1418  0.0  0.1  26336  6912 ?        Ssl  08:14   0:00 /usr/bin/pipewire-media-session
+cris        1419  0.1  0.6 1425400 27012 ?       S<sl 08:14   0:01 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cris        1438  0.1  0.2  13484  9472 ?        Ss   08:14   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+cris        1440  0.0  0.1 243776  7836 ?        Sl   08:14   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+cris        1446  0.0  0.2 243620  8704 ?        Ssl  08:14   0:00 /usr/libexec/gvfsd
+cris        1447  0.0  0.1 539908  7936 ?        Ssl  08:14   0:00 /usr/libexec/xdg-document-portal
+cris        1453  0.0  0.1 239024  6656 ?        Ssl  08:14   0:00 /usr/libexec/xdg-permission-store
+
+*****************************************************************************
+Procese care folosesc resurse excesive (CPU):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589  9.3 13.4 4707412 537820 ?      Ssl  08:14   1:28 /usr/bin/gnome-shell
+cris        2799  5.3  5.3 1188314148 214492 ?   Sl   08:15   0:47 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+root        1174  1.3  1.0 375696 43812 ?        Ssl  08:12   0:14 /usr/libexec/packagekitd
+cris        2818  1.3  2.5 33907936 100776 ?     Sl   08:15   0:11 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2693  1.2  3.9 1186265212 158304 ?   SLsl 08:15   0:11 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        2835  1.0  2.4 1186095776 98824 ?    Sl   08:15   0:09 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        1935  0.6  3.1 978976 127852 ?       Sl   08:14   0:05 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+root         653  0.5  0.8 1320028 32656 ?       Ssl  08:11   0:06 /usr/lib/snapd/snapd
+cris        2834  0.5  3.1 1186097648 124040 ?   Sl   08:15   0:04 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root           1  0.4  0.2 166836 11768 ?        Ss   08:11   0:04 /sbin/init splash
+cris        2712  0.4  2.3 239964 93668 ?        S    08:15   0:04 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+root          23  0.3  0.0      0     0 ?        S    08:11   0:03 [ksoftirqd/1]
+root          28  0.3  0.0      0     0 ?        I    08:11   0:03 [kworker/u4:1-events_unbound]
+root         335  0.3  0.0      0     0 ?        I    08:11   0:04 [kworker/u4:8-flush-8:0]
+root        2166  0.3  2.3 464356 93700 ?        Ssl  08:14   0:03 /usr/libexec/fwupd/fwupd
+cris        2284  0.3  1.3 564828 52592 ?        Ssl  08:14   0:03 /usr/libexec/gnome-terminal-server
+root          97  0.2  0.0      0     0 ?        I<   08:11   0:02 [kworker/1:1H-kblockd]
+root         332  0.2  0.0      0     0 ?        I    08:11   0:03 [kworker/u4:6-events_power_efficient]
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:11   0:03 /lib/systemd/systemd-oomd
+
+*****************************************************************************
+Procese care folosesc resurse excesive (Memorie):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589  9.3 13.4 4707412 537820 ?      Ssl  08:14   1:28 /usr/bin/gnome-shell
+cris        2799  5.3  5.3 1188314148 214492 ?   Sl   08:15   0:47 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        2693  1.2  3.9 1186265212 158304 ?   SLsl 08:15   0:11 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        1935  0.6  3.1 978976 127852 ?       Sl   08:14   0:05 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+cris        2834  0.5  3.1 1186097648 124040 ?   Sl   08:15   0:04 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2818  1.3  2.5 33907936 100776 ?     Sl   08:15   0:11 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2835  1.0  2.4 1186095776 98824 ?    Sl   08:15   0:09 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root        2166  0.3  2.3 464356 93700 ?        Ssl  08:14   0:03 /usr/libexec/fwupd/fwupd
+cris        2712  0.4  2.3 239964 93668 ?        S    08:15   0:04 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+cris        2836  0.2  2.2 1186112740 89640 ?    Sl   08:15   0:01 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2715  0.0  2.0 531768 81568 ?        Ssl  08:15   0:00 /usr/libexec/gsd-xsettings
+cris        1820  0.0  1.6 825596 67200 ?        Sl   08:14   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+cris        2774  0.0  1.6 33833308 67120 ?      Sl   08:15   0:00 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        3778  0.2  1.6 2868388 65772 ?       Sl   08:24   0:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+cris        2284  0.3  1.3 564828 52592 ?        Ssl  08:14   0:03 /usr/libexec/gnome-terminal-server
+cris        2696  0.0  1.1 33783124 47488 ?      S    08:15   0:00 /snap/code/162/usr/share/code/code --type=zygote --no-sandbox
+cris        2695  0.0  1.1 33783116 46976 ?      S    08:15   0:00 /snap/code/162/usr/share/code/code --type=zygote --no-zygote-sandbox --no-sandbox
+root        1174  1.3  1.0 375696 43812 ?        Ssl  08:12   0:14 /usr/libexec/packagekitd
+cris        1580  0.0  1.0 658488 40960 ?        Sl   08:14   0:00 /usr/libexec/goa-daemon
+
+*****************************************************************************
+Procese cu conexiuni de rețea deschise:
+code    2774 cris   24u  IPv4 161306      0t0  TCP 10.0.2.15:33180->52.182.143.208:443 (ESTABLISHED)
+code    2774 cris   31u  IPv4 161308      0t0  TCP 10.0.2.15:33190->52.182.143.208:443 (ESTABLISHED)
+
+*****************************************************************************
+Procese cu permisiuni setuid/setgid:
+/var/spool/postfix/public
+/var/mail
+/var/log/journal
+/var/log/journal/d2bf2c32cac84294853b1b5abe4249a9
+/var/metrics
+/var/crash
+/var/local
+/run/log/journal
+/snap/snapd/21465/usr/lib/snapd/snap-confine
+/snap/snapd/21759/usr/lib/snapd/snap-confine
+/snap/core20/2318/usr/bin/chage
+/snap/core20/2318/usr/bin/chfn
+/snap/core20/2318/usr/bin/chsh
+/snap/core20/2318/usr/bin/expiry
+/snap/core20/2318/usr/bin/gpasswd
+/snap/core20/2318/usr/bin/mount
+/snap/core20/2318/usr/bin/newgrp
+/snap/core20/2318/usr/bin/passwd
+/snap/core20/2318/usr/bin/ssh-agent
+/snap/core20/2318/usr/bin/su
+
+*****************************************************************************
+Verificare procese curente din punct de vedere al securității: 2024-06-28 08:41:58
+*****************************************************************************
+Procese rulate de utilizatorul root:
+root           1  0.2  0.2 166836 11768 ?        Ss   08:11   0:04 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    08:11   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:11   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:11   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:11   0:00 [netns]
+root           9  0.0  0.0      0     0 ?        I    08:11   0:01 [kworker/0:1-events]
+root          11  0.0  0.0      0     0 ?        I<   08:11   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    08:11   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    08:11   0:01 [ksoftirqd/0]
+root          16  0.2  0.0      0     0 ?        I    08:11   0:03 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    08:11   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    08:11   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    08:11   0:00 [idle_inject/1]
+root          22  0.0  0.0      0     0 ?        S    08:11   0:01 [migration/1]
+root          23  0.4  0.0      0     0 ?        S    08:11   0:07 [ksoftirqd/1]
+
+*****************************************************************************
+Procese suspicioase (filtrare după nume necunoscute):
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:11   0:05 /lib/systemd/systemd-oomd
+systemd+     375  0.0  0.3  25936 14048 ?        Ss   08:11   0:00 /lib/systemd/systemd-resolved
+systemd+     379  0.0  0.1  89388  7424 ?        Ssl  08:11   0:00 /lib/systemd/systemd-timesyncd
+avahi        613  0.0  0.1   7632  4224 ?        Ss   08:11   0:00 avahi-daemon: running [cris-VirtualBox.local]
+message+     617  0.1  0.1  11096  6784 ?        Ss   08:11   0:02 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       646  0.0  0.1 222404  6016 ?        Ssl  08:11   0:00 /usr/sbin/rsyslogd -n -iNONE
+kernoops     863  0.0  0.0  13092  2456 ?        Ss   08:11   0:00 /usr/sbin/kerneloops --test
+kernoops     884  0.0  0.0  13092  2464 ?        Ss   08:11   0:00 /usr/sbin/kerneloops
+rtkit        933  0.0  0.0 154004  3200 ?        SNsl 08:11   0:00 /usr/libexec/rtkit-daemon
+colord      1323  0.0  0.3 248252 13552 ?        Ssl  08:12   0:00 /usr/libexec/colord
+cris        1410  0.0  0.2  18068 10924 ?        Ss   08:14   0:01 /lib/systemd/systemd --user
+cris        1411  0.0  0.1 104712  6016 ?        S    08:14   0:00 (sd-pam)
+cris        1417  0.0  0.1  42448  6528 ?        S<sl 08:14   0:00 /usr/bin/pipewire
+cris        1418  0.0  0.1  26336  6656 ?        Ssl  08:14   0:00 /usr/bin/pipewire-media-session
+cris        1419  0.0  0.6 1687544 25860 ?       S<sl 08:14   0:01 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cris        1438  0.1  0.2  13484  9472 ?        Ss   08:14   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+cris        1440  0.0  0.1 243776  7836 ?        Sl   08:14   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+cris        1446  0.0  0.2 243620  8448 ?        Ssl  08:14   0:00 /usr/libexec/gvfsd
+cris        1447  0.0  0.1 540940  7936 ?        Ssl  08:14   0:00 /usr/libexec/xdg-document-portal
+cris        1453  0.0  0.1 239024  6656 ?        Ssl  08:14   0:00 /usr/libexec/xdg-permission-store
+
+*****************************************************************************
+Procese care folosesc resurse excesive (CPU):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        4320 27.9  9.8 11426796 394772 ?     Sl   08:37   1:06 /snap/firefox/4483/usr/lib/firefox/firefox
+cris        1589 22.4 15.0 4778928 600980 ?      Ssl  08:14   6:10 /usr/bin/gnome-shell
+cris        4718 16.1  5.1 6874712 205640 ?      Sl   08:38   0:35 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {7027bf05-328f-49e2-83fa-f73e541cdc0c} 4320 true tab
+cris        2799 10.0  6.4 1190474308 257504 ?   Sl   08:15   2:40 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        2818  2.7  2.4 33904992 98748 ?      Sl   08:15   0:43 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2693  2.6  4.2 1186266764 171700 ?   SLsl 08:15   0:41 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        4715  2.2  3.9 2492664 156544 ?      Sl   08:38   0:05 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {3076ae7c-fd26-462e-bd39-25fe93e466ea} 4320 true tab
+cris        2712  1.4  2.2 239968 91712 ?        S    08:15   0:23 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+root        4486  1.2  0.0      0     0 ?        I    08:38   0:02 [kworker/u4:3-events_unbound]
+cris        4681  1.0  2.9 2454916 118736 ?      Sl   08:38   0:02 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 32706 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d1b9e69c-40fc-40e8-bb14-05b03a303965} 4320 true tab
+root        1174  0.8  1.0 375696 43556 ?        Ssl  08:12   0:14 /usr/libexec/packagekitd
+cris        2835  0.6  2.5 1186095776 100876 ?   Sl   08:15   0:09 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root          23  0.4  0.0      0     0 ?        S    08:11   0:07 [ksoftirqd/1]
+cris        2284  0.4  1.2 829856 51824 ?        Ssl  08:14   0:06 /usr/libexec/gnome-terminal-server
+cris        2834  0.4  3.1 1186097648 127656 ?   Sl   08:15   0:06 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+root        4056  0.4  0.0      0     0 ?        I    08:28   0:03 [kworker/u4:0-events_unbound]
+cris        4653  0.4  2.3 2425192 95228 ?       Sl   08:38   0:01 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 31746 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d76e9544-9c7a-46b1-b50c-a58f86b88a33} 4320 true tab
+root          28  0.3  0.0      0     0 ?        I    08:11   0:06 [kworker/u4:1-ext4-rsv-conversion]
+root         335  0.3  0.0      0     0 ?        I    08:11   0:07 [kworker/u4:8-ext4-rsv-conversion]
+
+*****************************************************************************
+Procese care folosesc resurse excesive (Memorie):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589 22.4 15.0 4778928 600980 ?      Ssl  08:14   6:10 /usr/bin/gnome-shell
+cris        4320 27.9  9.8 11426796 394772 ?     Sl   08:37   1:06 /snap/firefox/4483/usr/lib/firefox/firefox
+cris        2799 10.0  6.4 1190474308 257504 ?   Sl   08:15   2:40 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        4718 16.1  5.1 6874712 205640 ?      Sl   08:38   0:35 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {7027bf05-328f-49e2-83fa-f73e541cdc0c} 4320 true tab
+cris        2693  2.6  4.2 1186266764 171700 ?   SLsl 08:15   0:41 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        4715  2.2  3.9 2492664 156544 ?      Sl   08:38   0:05 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {3076ae7c-fd26-462e-bd39-25fe93e466ea} 4320 true tab
+cris        2834  0.4  3.1 1186097648 127656 ?   Sl   08:15   0:06 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        1935  0.3  3.1 978976 125548 ?       Sl   08:14   0:05 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+cris        4681  1.0  2.9 2454916 118736 ?      Sl   08:38   0:02 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 32706 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d1b9e69c-40fc-40e8-bb14-05b03a303965} 4320 true tab
+cris        2835  0.6  2.5 1186095776 100876 ?   Sl   08:15   0:09 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2818  2.7  2.4 33904992 98748 ?      Sl   08:15   0:43 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        4653  0.4  2.3 2425192 95228 ?       Sl   08:38   0:01 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 31746 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d76e9544-9c7a-46b1-b50c-a58f86b88a33} 4320 true tab
+root        2166  0.2  2.3 464356 93700 ?        Ssl  08:14   0:03 /usr/libexec/fwupd/fwupd
+cris        2712  1.4  2.2 239968 91712 ?        S    08:15   0:23 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+cris        2836  0.1  2.2 1186112740 89988 ?    Sl   08:15   0:02 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2715  0.0  1.9 531768 77856 ?        Ssl  08:15   0:00 /usr/libexec/gsd-xsettings
+cris        5051  0.1  1.8 2393072 74240 ?       Sl   08:38   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 6 -isForBrowser -prefsLen 32004 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {dd3cfbbd-03d7-4ddc-b15b-eed7b2de3cf9} 4320 true tab
+cris        5113  0.1  1.8 2393052 74112 ?       Sl   08:39   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 7 -isForBrowser -prefsLen 32004 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {04a59a5f-86c2-4267-848d-fc88a84ba9f1} 4320 true tab
+cris        4723  0.2  1.8 2392432 73856 ?       Sl   08:38   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 5 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {69433364-be4b-4b38-84c7-8b033185ccf6} 4320 true tab
+
+*****************************************************************************
+Procese cu conexiuni de rețea deschise:
+code    2774 cris   24u  IPv4 166631      0t0  TCP 10.0.2.15:34710->52.178.17.3:443 (ESTABLISHED)
+code    2774 cris   30u  IPv4 166632      0t0  TCP 10.0.2.15:34716->52.178.17.3:443 (ESTABLISHED)
+firefox 4320 cris   43u  IPv4 166208      0t0  TCP 10.0.2.15:41598->34.107.243.93:443 (ESTABLISHED)
+firefox 4320 cris  151u  IPv4 168195      0t0  TCP 10.0.2.15:34170->172.217.18.14:443 (ESTABLISHED)
+firefox 4320 cris  155u  IPv4 166215      0t0  TCP 10.0.2.15:44998->34.120.208.123:443 (ESTABLISHED)
+
+*****************************************************************************
+Procese cu permisiuni setuid/setgid:
+/var/spool/postfix/public
+/var/mail
+/var/log/journal
+/var/log/journal/d2bf2c32cac84294853b1b5abe4249a9
+/var/metrics
+/var/crash
+/var/local
+/run/log/journal
+/snap/snapd/21465/usr/lib/snapd/snap-confine
+/snap/snapd/21759/usr/lib/snapd/snap-confine
+/snap/core20/2318/usr/bin/chage
+/snap/core20/2318/usr/bin/chfn
+/snap/core20/2318/usr/bin/chsh
+/snap/core20/2318/usr/bin/expiry
+/snap/core20/2318/usr/bin/gpasswd
+/snap/core20/2318/usr/bin/mount
+/snap/core20/2318/usr/bin/newgrp
+/snap/core20/2318/usr/bin/passwd
+/snap/core20/2318/usr/bin/ssh-agent
+/snap/core20/2318/usr/bin/su
+
+*****************************************************************************
+Verificare procese curente din punct de vedere al securității: 2024-06-28 10:14:36
+*****************************************************************************
+Procese rulate de utilizatorul root:
+root           1  0.0  0.2 166836 11768 ?        Ss   08:18   0:05 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    08:18   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:18   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:18   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:18   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:18   0:00 [netns]
+root           9  0.0  0.0      0     0 ?        I    08:18   0:05 [kworker/0:1-events]
+root          11  0.0  0.0      0     0 ?        I<   08:18   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    08:18   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    08:18   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    08:18   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    08:18   0:01 [ksoftirqd/0]
+root          16  0.1  0.0      0     0 ?        I    08:18   0:09 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    08:18   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    08:18   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    08:18   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    08:18   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    08:18   0:00 [idle_inject/1]
+root          22  0.0  0.0      0     0 ?        S    08:18   0:01 [migration/1]
+root          23  0.2  0.0      0     0 ?        S    08:18   0:14 [ksoftirqd/1]
+
+*****************************************************************************
+Procese suspicioase (filtrare după nume necunoscute):
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:18   0:20 /lib/systemd/systemd-oomd
+systemd+     375  0.0  0.3  25936 14048 ?        Ss   08:18   0:01 /lib/systemd/systemd-resolved
+systemd+     379  0.0  0.1  89388  7296 ?        Ssl  08:18   0:00 /lib/systemd/systemd-timesyncd
+avahi        613  0.0  0.1   7632  4224 ?        Ss   08:18   0:00 avahi-daemon: running [cris-VirtualBox.local]
+message+     617  0.0  0.1  11096  6784 ?        Ss   08:18   0:03 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       646  0.0  0.1 222404  6016 ?        Ssl  08:18   0:00 /usr/sbin/rsyslogd -n -iNONE
+kernoops     863  0.0  0.0  13092  2456 ?        Ss   08:18   0:00 /usr/sbin/kerneloops --test
+kernoops     884  0.0  0.0  13092  2464 ?        Ss   08:18   0:00 /usr/sbin/kerneloops
+rtkit        933  0.0  0.0 154004  3200 ?        SNsl 08:18   0:00 /usr/libexec/rtkit-daemon
+colord      1323  0.0  0.3 248252 12400 ?        Ssl  08:18   0:00 /usr/libexec/colord
+cris        1410  0.0  0.2  18068 10924 ?        Ss   08:21   0:02 /lib/systemd/systemd --user
+cris        1411  0.0  0.1 104712  5760 ?        S    08:21   0:00 (sd-pam)
+cris        1417  0.0  0.1  42448  4992 ?        S<sl 08:21   0:00 /usr/bin/pipewire
+cris        1418  0.0  0.1  26336  5120 ?        Ssl  08:21   0:00 /usr/bin/pipewire-media-session
+cris        1419  0.5  0.6 2474004 25092 ?       S<sl 08:21   0:35 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cris        1438  0.0  0.2  13360  9576 ?        Ss   08:21   0:04 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+cris        1440  0.0  0.1 243776  7836 ?        Sl   08:21   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+cris        1446  0.0  0.2 243620  8320 ?        Ssl  08:21   0:00 /usr/libexec/gvfsd
+cris        1447  0.0  0.1 614672  7936 ?        Ssl  08:21   0:00 /usr/libexec/xdg-document-portal
+cris        1453  0.0  0.1 239024  6528 ?        Ssl  08:21   0:00 /usr/libexec/xdg-permission-store
+
+*****************************************************************************
+Procese care folosesc resurse excesive (CPU):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        6571 14.7  9.1 6952956 368028 ?      Sl   10:02   1:49 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 9 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {779c6000-38ab-4e96-a94d-20f9c446ef78} 4320 true tab
+cris        1589 13.0 14.0 4764340 563160 ?      Ssl  08:21  14:50 /usr/bin/gnome-shell
+cris        6833  8.6  1.8 780876 74024 pts/0    Sl   10:06   0:42 gedit main.sh
+cris        4320  4.5 12.2 11969612 490688 ?     Sl   08:44   4:04 /snap/firefox/4483/usr/lib/firefox/firefox
+cris        2799  3.4  6.2 1190482628 249676 ?   Sl   08:22   3:56 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        2693  0.9  2.4 1186266764 99476 ?    SLsl 08:21   1:01 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        2818  0.9  1.5 33913312 60684 ?      Sl   08:22   1:06 /snap/code/162/usr/share/code/code --type=gpu-process --disable-gpu-sandbox --no-sandbox --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        6540  0.8  3.5 2649204 143488 ?      Sl   10:02   0:06 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {c4f47a8f-ba2b-4564-ad20-bfbf3a52f0a9} 4320 true tab
+cris        1419  0.5  0.6 2474004 25092 ?       S<sl 08:21   0:35 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+cris        2712  0.5  2.2 239968 91748 ?        S    08:21   0:34 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+root        6471  0.5  0.0      0     0 ?        I    10:01   0:04 [kworker/u4:1-events_unbound]
+cris        4715  0.3  3.8 2492924 154548 ?      Sl   08:44   0:17 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {3076ae7c-fd26-462e-bd39-25fe93e466ea} 4320 true tab
+root          23  0.2  0.0      0     0 ?        S    08:18   0:14 [ksoftirqd/1]
+systemd+     371  0.2  0.1  14836  6784 ?        Ss   08:18   0:20 /lib/systemd/systemd-oomd
+root        1174  0.2  1.0 375696 42532 ?        Ssl  08:18   0:14 /usr/libexec/packagekitd
+cris        6455  0.2  1.6 2802900 66712 ?       Sl   10:01   0:02 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+root        6883  0.2  0.0      0     0 ?        I    10:07   0:01 [kworker/1:1-events]
+root          16  0.1  0.0      0     0 ?        I    08:18   0:09 [rcu_preempt]
+root         653  0.1  0.8 1320028 32588 ?       Ssl  08:18   0:07 /usr/lib/snapd/snapd
+
+*****************************************************************************
+Procese care folosesc resurse excesive (Memorie):
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cris        1589 13.0 14.0 4764340 563160 ?      Ssl  08:21  14:50 /usr/bin/gnome-shell
+cris        4320  4.5 12.2 11969612 490688 ?     Sl   08:44   4:04 /snap/firefox/4483/usr/lib/firefox/firefox
+cris        6571 14.7  9.1 6952956 368028 ?      Sl   10:02   1:49 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 9 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {779c6000-38ab-4e96-a94d-20f9c446ef78} 4320 true tab
+cris        2799  3.4  6.2 1190482628 249676 ?   Sl   08:22   3:56 /snap/code/162/usr/share/code/code --type=renderer --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/snap/code/162/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --no-sandbox --disable-blink-features=FontMatchingCTMigration, --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1719551485698889 --launch-time-ticks=237181850 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:23afa5b9-ba64-45f9-825c-ff587e316ed4
+cris        4715  0.3  3.8 2492924 154548 ?      Sl   08:44   0:17 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 27110 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {3076ae7c-fd26-462e-bd39-25fe93e466ea} 4320 true tab
+cris        6540  0.8  3.5 2649204 143488 ?      Sl   10:02   0:06 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {c4f47a8f-ba2b-4564-ad20-bfbf3a52f0a9} 4320 true tab
+cris        4681  0.1  3.2 2483572 131420 ?      Sl   08:44   0:08 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 32706 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d1b9e69c-40fc-40e8-bb14-05b03a303965} 4320 true tab
+cris        1935  0.1  3.0 978976 120940 ?       Sl   08:21   0:06 /snap/snap-store/1113/usr/bin/snap-store --gapplication-service
+cris        2693  0.9  2.4 1186266764 99476 ?    SLsl 08:21   1:01 /snap/code/162/usr/share/code/code --no-sandbox .
+cris        4653  0.0  2.3 2425176 95716 ?       Sl   08:44   0:03 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 31746 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {d76e9544-9c7a-46b1-b50c-a58f86b88a33} 4320 true tab
+cris        2712  0.5  2.2 239968 91748 ?        S    08:21   0:34 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.NV7KP2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+root        2166  0.0  2.1 464356 87428 ?        Ssl  08:21   0:04 /usr/libexec/fwupd/fwupd
+cris        2834  0.1  2.1 1186097648 86444 ?    Sl   08:22   0:09 /snap/code/162/usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --no-sandbox --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=2709 --enable-crash-reporter=fb490878-36a7-4d8e-9cfc-986aaf984903,no_channel --user-data-dir=/home/cris/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7902530201408016946,5935242496144473015,262144 --enable-features=kWebSQLAccess --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+cris        2715  0.0  1.9 531768 77856 ?        Ssl  08:21   0:00 /usr/libexec/gsd-xsettings
+cris        6756  0.0  1.8 2393036 75120 ?       Sl   10:05   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 11 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {64f9f3b1-92f7-44cf-8bc2-3ca0a2ff13b5} 4320 true tab
+cris        6795  0.0  1.8 2393052 74752 ?       Sl   10:05   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 12 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {da9e2b92-55cb-47b1-9c46-5844da34d7ca} 4320 true tab
+cris        6733  0.0  1.8 2393040 74240 ?       Sl   10:04   0:00 /snap/firefox/4483/usr/lib/firefox/firefox -contentproc -childID 10 -isForBrowser -prefsLen 32056 -prefMapSize 245373 -jsInitLen 234488 -parentBuildID 20240626001103 -greomni /snap/firefox/4483/usr/lib/firefox/omni.ja -appomni /snap/firefox/4483/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4483/usr/lib/firefox/browser {0706a416-60e7-422d-ba33-894ab37a4f73} 4320 true tab
+cris        6833  8.6  1.8 780876 74024 pts/0    Sl   10:06   0:42 gedit main.sh
+cris        6455  0.2  1.6 2802900 66712 ?       Sl   10:01   0:02 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+
+*****************************************************************************
+Procese cu conexiuni de rețea deschise:
+code    2774 cris   24u  IPv4 333285      0t0  TCP 10.0.2.15:44144->52.182.143.210:443 (ESTABLISHED)
+firefox 4320 cris   93u  IPv4 333464      0t0  TCP 10.0.2.15:39872->34.107.243.93:443 (ESTABLISHED)
+firefox 4320 cris  100u  IPv4 332310      0t0  TCP 10.0.2.15:39876->34.107.243.93:443 (ESTABLISHED)
+firefox 4320 cris  113u  IPv4 333469      0t0  TCP 10.0.2.15:46230->34.149.100.209:443 (ESTABLISHED)
+firefox 4320 cris  131u  IPv4 329618      0t0  TCP 10.0.2.15:56810->172.64.155.141:443 (ESTABLISHED)
+
+*****************************************************************************
+Procese cu permisiuni setuid/setgid:
+/var/spool/postfix/public
+/var/mail
+/var/log/journal
+/var/log/journal/d2bf2c32cac84294853b1b5abe4249a9
+/var/metrics
+/var/crash
+/var/local
+/run/log/journal
+/snap/snapd/21465/usr/lib/snapd/snap-confine
+/snap/snapd/21759/usr/lib/snapd/snap-confine
+/snap/core20/2318/usr/bin/chage
+/snap/core20/2318/usr/bin/chfn
+/snap/core20/2318/usr/bin/chsh
+/snap/core20/2318/usr/bin/expiry
+/snap/core20/2318/usr/bin/gpasswd
+/snap/core20/2318/usr/bin/mount
+/snap/core20/2318/usr/bin/newgrp
+/snap/core20/2318/usr/bin/passwd
+/snap/core20/2318/usr/bin/ssh-agent
+/snap/core20/2318/usr/bin/su
+

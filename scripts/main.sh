@@ -1,26 +1,32 @@
 #!/bin/bash
 
-# Funcție pentru afișarea meniului
-display_menu() {
-    echo "Meniu:"
-    echo "1. Verificare sume de control pentru fișiere"
-    echo "2. Verificare fișiere sensibile"
-    echo "3. Verificare permisiuni"
-    echo "4. Verificare procese"
-    echo "5. Generare sume de control"
-    echo "6. Verificarea logurilor"
-    echo "7. Ieșire"
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+RESET='\033[0m'
+
+# Funcție pentru a afișa meniul
+show_menu() {
+    echo -e "${GREEN}1) Verificare sume de control${RESET}"
+    echo -e "${YELLOW}2) Verificare fișiere sensibile${RESET}"
+    echo -e "${BLUE}3) Verificare permisiuni${RESET}"
+    echo -e "${MAGENTA}4) Verificare procese${RESET}"
+    echo -e "${CYAN}5) Generare sume de control${RESET}"
+    echo -e "${RED}6) Verificare logurilor${RESET}"
+    echo -e "${WHITE}7) Ieșire din meniu${RESET}"
     echo ""
     echo -n "Selectați o opțiune: "
 }
 
 # Funcție pentru a trimite notificare
 send_notification() {
-
     local option_name=$1
     local message="Opțiunea \"$option_name\" a fost selectată și procesată."
-	
-    notify-send "Meniu Linux Security" "$1"
+    notify-send "Meniu Linux Security" "$message"
 }
 
 # Funcție pentru verificarea parolei
@@ -40,7 +46,7 @@ check_password() {
 
 # Loop pentru meniu
 while true; do
-    display_menu
+    show_menu  # Afișează meniul corect
 
     # Citirea opțiunii utilizatorului
     read option
@@ -75,12 +81,13 @@ while true; do
             echo "Parolă corectă. Începe generarea sumelor de control..."
             ./generate_checksum.sh
             ;;
-        6)	send_notification "verificare logurilor"
-        	echo "Verificarea logurilor"
-        	./check_system_logs.sh
-        	;;
+        6)
+            send_notification "verificare logurilor"
+            echo "Verificarea logurilor"
+            ./check_system_logs.sh
+            ;;
         7)
-            echo "Ieșire din meniu. La revedere!"
+            echo "Ieșire din meniu."
             exit 0
             ;;
         *)

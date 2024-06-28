@@ -16,7 +16,7 @@ if [ ! -w "../reports" ]; then
 fi
 
  echo "Verificare loguri de sistem - $(date)"
-# Creare și inițializare fișier de raport
+# Creare și inițializare fișier de raport, mereu sterge continutul initial al raportului
 echo "Verificare loguri de sistem - $(date)" > $output_file
 
 # Filtrare mesaje de eroare din syslog

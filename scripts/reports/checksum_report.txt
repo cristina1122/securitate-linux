@@ -1,4 +1,4 @@
-Verificare sume de control pentru pachete la data: 2024-06-27 09:28:43
+Verificare sume de control pentru pachete la data: 2024-06-28 10:14:27
 Fișierul /home/cris/Desktop/git/securitate-linux/config/dir1/do_nothing.sh are suma de control corectă.
 Fișierul /home/cris/Desktop/git/securitate-linux/config/dir1/nimic.sh are suma de control corectă.
 Fișierul /home/cris/Desktop/git/securitate-linux/config/dir2/do_nothing2.sh are suma de control corectă.
